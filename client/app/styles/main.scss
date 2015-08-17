@@ -1,0 +1,53 @@
+@import "/bower_components/semantic-ui/dist/semantic.css";
+@import "/bower_components/semantic-ui/dist/components/dropdown.css";
+
+#main {
+    margin-top: 40px;
+}
+
+#search {
+    .ui.form .ui.input>input {
+        width: 100%!important;
+    }
+}
+
+#filters {
+    fieldset {
+        min-height: 50px;
+        border: 0;
+        border-bottom: 1px solid rgba(34,36,38,.15);
+        margin: 0;
+    }
+}
+
+#results {
+    .criteria {
+        border-bottom: 1px solid rgba(34,36,38,.15);
+        &>.column {
+            padding: 0;
+            margin: 10px;
+        }
+        .locations {
+            border-right: 1px solid rgba(34,36,38,.15);
+        }
+        .periods {
+            border-right: 1px solid rgba(34,36,38,.15);
+            .from, .to {
+                width: 43%;
+                float: left;
+            }
+            .space {
+                width: 10%;
+                float: left;
+            }
+            &:after {
+                display: block;
+                content: ' ';
+                height: 0;
+                clear: both;
+                overflow: hidden;
+                visibility: hidden;
+            }
+        }
+    }
+}

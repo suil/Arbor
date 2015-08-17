@@ -1,0 +1,75 @@
+<h1>Load Board Search</h1>
+<form id="search" ng-controller="SearchController">
+	<div class="ui form">
+		<div class="inline fields"> 
+			<div class="two wide field">
+				<label>Pick-up</label>
+			</div>
+			<div class="six wide field">
+				<input type="text" name="pickupLocation" placeholder="Where to pick-up" />
+			</div>
+			<div class="four wide field">
+				<div class="ui icon input">
+					<input type="text" name="pickupDate" class="datetimepicker" placeholder="Pick-up date" />
+					<i class="calendar icon"></i>
+				</div>
+			</div>
+		</div>
+		<div class="inline fields">
+			<div class="two wide field">
+				<label>Drop-off</label>
+			</div>
+			<div class="six wide field">
+				<input type="text" name="dropoffLocation" placeholder="Where to drop-off" />
+			</div>
+			<div class="four wide field">
+				<div class="ui icon input">
+					<input type="text" name="dropoffDate" class="datetimepicker" placeholder="Drop-off date" />
+					<i class="calendar icon"></i>
+				</div>
+			</div>
+		</div>
+		<div class="inline fields">
+			<div class="two wide field">
+				<label>Category</label>
+			</div>
+			<div class="ten wide field">
+				<select name="category" class="ui dropdown" multiple="multiple">
+					<option>Category 1</option>
+					<option>Category 2</option>
+					<option>Category 3</option>
+					<option>Category 4</option>
+					<option>Category 5</option>
+				</select>
+			</div>
+		</div>
+		<div class="inline fields">
+			<div class="two wide field">
+				<label></label>
+			</div>
+			<div class="field">
+				<div class="ui checkbox">
+					<input type="checkbox" name="isHazardous" />
+					<label>Hazardous</label>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui checkbox">
+					<input type="checkbox" name="isStackable" />
+					<label>Stackable</label>
+				</div>
+			</div>
+		</div>
+		<div class="inline fields">
+			<div class="field">
+				<button type="button" class="ui primary button" ng-click="search()">Search</button>
+			</div>
+		</div>
+	</div>
+</form>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("form#search select[name='category']").dropdown();
+		$(".datetimepicker").datetimepicker();
+	})
+</script>
